@@ -1,0 +1,32 @@
+{
+  "name": "workshop-js",
+  "version": "1.0.0",
+  "description": "Workshop node.js REST services",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "bl": "^1.0.0",
+    "async": "^1.4.2",
+    "sap-cds": "1.0.2",    
+    "extend": "^2.0.1",
+    "glob": "^5.0.14",
+    "express": "^4.13.1",
+    "json-stringify-safe": "^5.0.1",
+    "node-dir": "^0.1.9",
+    "passport": "^0.2.2",
+    "tough-cookie": "^2.0.0",
+    "winston": "^1.0.1",
+    "sap-hdb-connection": "latest",
+    "sap-xssec": "0.2.5",
+    "sap-xsenv": "1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.wdf.sap.corp/I809764/xsa-workshop"
+  },
+  "author": "Thomas Jung"
+}

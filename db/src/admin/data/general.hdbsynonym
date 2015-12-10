@@ -1,0 +1,8 @@
+{
+	"workshop.admin.data::DUMMY" : {
+		"target" : {
+			"schema" : "SYS",
+			"object" : "DUMMY"
+		}
+	}	
+}

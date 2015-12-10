@@ -1,0 +1,52 @@
+sap.ui.jsview("exercises_ui.xsodataTest", {
+
+      getControllerName : function() {
+         return "exercises_ui.xsodataTest";
+      },
+
+      createContent : function(oController) {
+    	//Insert oData Model Here 
+    	//To-Do: Place Code Here 
+
+    	  var arrayHeaders = new Array(); 
+    	  var oControl; 
+    	  oTable = new sap.ui.table.Table("test",{tableId: "tableID", 
+    	    visibleRowCount: 10}); 
+    	  oTable.setTitle("Business Partners"); 
+
+    	  //Table Column Definitions 
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","PartnerId"); 
+    		 oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Partner ID"}), template: oControl, sortProperty: "PartnerId", filterProperty: "PartnerId", width: "125px" })); 
+
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","EmailAddress"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Email Address"}), template: oControl, sortProperty: "EmailAddress", filterProperty: "EmailAddress", width: "125px" }));  
+
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","PhoneNumber"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Phone Number"}), template: oControl, width: "125px" })); 
+
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","FaxNumber"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Fax Number"}), template: oControl, width: "125px" })); 
+
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","LegalForm"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Legal Form"}), template: oControl, sortProperty: "LegalForm", filterProperty: "LegalForm", width: "125px" }));  
+
+    	  oControl = new sap.ui.commons.TextField().bindProperty("value","Currency"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Currency"}), template: oControl, width: "125px" }));  
+
+    	  oControl = new sap.ui.commons.Link ().bindProperty("text","WebAddress"); 
+    	  oControl.bindProperty("href","WebAddress"); 
+    	  oControl.setTarget("_blank"); 
+    	  oTable.addColumn(new sap.ui.table.Column({label:new sap.ui.commons.Label({text:"Web Address" }), template: oControl, width: "125px" }));  
+
+    	  oTable.setModel(oModel); 
+
+    	  //Create Sorter and Bind to the Business Partner Entity 
+    	  //To-Do: Place Code Here  
+
+    	  var iNumberOfRows = oTable.getBinding("rows").iLength; 
+    	  oTable.setTitle("Business Partners" + " (" + iNumberOfRows + ")" ); 
+
+    	  return oTable; 
+      }
+
+});

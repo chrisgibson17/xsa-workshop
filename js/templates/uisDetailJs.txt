@@ -1,0 +1,11 @@
+/*UIS - make sure connection with container has been established then subscribe to events*/
+gadgets.HubSettings.onConnect = registerContext;
+function registerContext(){
+function rowSelectContextChanged(topic, context){
+/*Get property rowSelect from context and call Detail.Controller contextRowSelect(purchase_order_id)*/
+var poId = context.getPropertyByKey("rowSelect")[0];
+oController.contextRowSelect(poId);
+	}
+/*UIS - Register context changes for property rowSelect*/
+gadgets.sapcontext.subscribe(rowSelectContextChanged); 
+}

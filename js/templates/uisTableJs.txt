@@ -1,0 +1,9 @@
+//Table Row Select Event Handler
+onRowSelect: function(oEvent){
+var oTable = oEvent.getSource();
+var povalue = oEvent.getSource().getModel().getProperty(
+  "PurchaseOrderId",oTable.getContextByIndex(oTable.getSelectedIndex()));
+if(povalue){
+gadgets.sapcontext.publish("rowSelect", povalue);
+	}
+},

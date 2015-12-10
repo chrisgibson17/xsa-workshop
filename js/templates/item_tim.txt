@@ -1,0 +1,2 @@
+listCsvFile csvFiles;
+import csvFiles "HANA_WORKSHOP_<group>" "workshop.exercises.g<group>.data::item";

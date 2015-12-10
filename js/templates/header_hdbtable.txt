@@ -1,0 +1,12 @@
+table.schemaName = "HANA_WORKSHOP_<group_number>";
+table.tableType = COLUMNSTORE;  
+table.description = "Workshop Order Header";
+table.columns = [ 
+	{name = "OrderId"; sqlType = NVARCHAR; nullable = false; length = 10;   comment = "Order ID"; },
+	{name = "CreatedBy"; sqlType = NVARCHAR; nullable = false; length = 10; comment = "Created By"; },
+	{name = "CreatedAt"; sqlType = DATE; nullable = false;                  comment = "Created At - Date and Time"; },
+	{name = "Currency"; sqlType = NVARCHAR; nullable = false; length = 5;   comment = "Currency Code"; },	
+	{name = "GrossAmount"; sqlType = DECIMAL; nullable = false; precision = 15; scale = 2; defaultValue = "0"; 
+	                                                                        comment = "Total Gross Amount"; }	 
+ ];			
+table.primaryKey.pkcolumns = ["OrderId"];

@@ -1,0 +1,4 @@
+service namespace "workshop.services" {
+  "SAP_HANA_EPM_DEMO"."sap.hana.democontent.epm.data::businessPartner" 
+      as "BusinessPartners";
+}

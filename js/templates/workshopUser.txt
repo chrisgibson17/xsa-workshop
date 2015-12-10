@@ -1,0 +1,4 @@
+role workshop.exercises.g<group>.data::workshopUser {
+		catalog schema "HANA_WORKSHOP_<Group>": SELECT;
+	    application privilege: workshop.exercises.g<group>::Basic;
+}

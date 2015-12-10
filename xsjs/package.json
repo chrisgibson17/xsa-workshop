@@ -1,0 +1,22 @@
+{
+  "name": "workshop-xsjs",
+  "description": "Workshop - XSJS Compatiblity",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "sap-xsjs": "1.2.4",
+    "sap-xsenv": "1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "scripts": {
+    "start": "node xsjs.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.wdf.sap.corp/I809764/xsa-workshop"
+  },
+  "author": "Thomas Jung"
+}

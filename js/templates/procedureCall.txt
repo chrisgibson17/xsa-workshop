@@ -1,0 +1,2 @@
+call "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.procedures::get_bp_addresses_by_role"(
+                             im_partnerrole => '02',  ex_bp_addresses => ? );

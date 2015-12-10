@@ -1,0 +1,2 @@
+call "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.procedures::insert_product_data"(
+         im_product => 'ProductA', im_category => 'Software', im_price => '19.99', ex_message => ?);

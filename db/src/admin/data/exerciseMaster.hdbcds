@@ -1,0 +1,12 @@
+namespace workshop.admin.data;
+
+context exerciseMaster {
+
+     Entity workshop {
+     	key WORKSHOP_ID: String(60);
+     	JSON_DATA: LargeString;
+ 	 } technical configuration {
+          column store;
+    };
+    
+};

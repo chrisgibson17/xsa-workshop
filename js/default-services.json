@@ -1,0 +1,8 @@
+{
+  "hana": {
+    "host": "localhost",
+    "port": "34015",
+    "user": "SYSTEM",
+    "password": "manager"
+  }
+}

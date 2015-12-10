@@ -1,0 +1,16 @@
+contextRowSelect: function(poId){
+	
+	var Context = "/PurchaseOrderHeader(PurchaseOrderId='"+poId+"')";
+	var oLayout = sap.ui.getCore().byId("mLayout1"); 
+	var oLayout2 = sap.ui.getCore().byId("mLayout2"); 
+	oLayout.bindContext(Context);
+	oLayout2.bindContext(Context);		
+	//oView.bindContext(Context);ddd
+	
+	var oTableItems = sap.ui.getCore().byId("poItemTable");
+	var ContextItem = 
+          "/PurchaseOrderHeader(PurchaseOrderId='"+poId+"')/PurchaseOrderItem";
+	var sort1 = new sap.ui.model.Sorter(
+            "PurchaseOrderId,PurchaseOrderItem");
+	oTableItems.bindRows(ContextItem,sort1);
+		},

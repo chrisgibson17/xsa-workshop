@@ -1,0 +1,24 @@
+{
+	"xsappname" : "workshop",
+	"scopes" : [{
+			"name" : "$XSAPPNAME.admin",
+			"description" : "Administrative Activities"
+		}, {
+			"name" : "$XSAPPNAME.display",
+			"description" : "View only Activities"
+		}
+	],
+	"role-templates" : [{
+			"name" : "display",
+			"description" : "Role for display only activities",
+			"scope-references" : [
+				"$XSAPPNAME.display"]
+		}, {
+			"name" : "admin",
+			"description" : "Role for all workshop admin activities",
+			"scope-references" : [
+				"$XSAPPNAME.admin",
+				"$XSAPPNAME.display"]
+		}
+	]
+}

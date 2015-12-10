@@ -1,0 +1,10 @@
+namespace workshop.admin.data;
+
+context users {
+Type RolesT {
+        ROLE_NAME : String(255);
+      };
+Type LogT {
+        MESSAGE: String(255);
+      };      
+};

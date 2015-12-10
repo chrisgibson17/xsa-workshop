@@ -1,0 +1,2 @@
+implements workshop.exercises.g<group>.data:header.hdbtim;
+csvFiles = ["workshop.exercises.g<group>.data:header.csv"];

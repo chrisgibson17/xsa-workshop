@@ -1,0 +1,47 @@
+1.	table.xml
+<Module>
+    <ModulePrefs title="Purchase Order Worklist">
+        <Require feature="sap-context"/>
+    </ModulePrefs>
+    <Content type="html" href="/workshop/exercises/g<group>/uis/html/table.html">
+    </Content>
+</Module>
+
+2.	tabs.xml 
+<Module>
+    <ModulePrefs title="Purchase Order Details">
+        <Require feature="sap-context"/>
+    </ModulePrefs>
+    <Content type="html" href="/workshop/exercises/g<group>/uis/html/tabs.html">
+    </Content>
+</Module>
+ 
+
+3.	search.xml 
+<Module>
+    <ModulePrefs title="Purchase Order Search">
+        <Require feature="sap-context"/>
+    </ModulePrefs>
+    <Content type="html" href="/workshop/exercises/g<group>/uis/html/search.html">
+    </Content>
+</Module>
+
+4.	report.xml  
+<Module>
+	<ModulePrefs title="Purchase Order Reports">
+		<Require feature="gadgetprefs"/>
+	</ModulePrefs>
+        <UserPref name="filterReport" default_value= "ProductCategory" 
+           datatype="enum">
+        	<EnumValue value = "PartnerCompanyName" 
+          display_value="Partner Company Name" /> 
+        	<EnumValue value = "PartnerCity" display_value="Partner City" />   
+        	<EnumValue value = "PartnerPostalCode" 
+              display_value="Partner Postal Code" />          	
+        	<EnumValue value = "ProductCategory" 
+              display_value="Product Category" />
+        	<EnumValue value = "ProductId" display_value="Product" />           	     	
+        </UserPref>
+    <Content type="html" href="/workshop/exercises/g<group>/uis/html/report.html">
+    </Content>	
+</Module>

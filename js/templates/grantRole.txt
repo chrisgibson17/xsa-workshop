@@ -1,0 +1,1 @@
+call "_SYS_REPO"."GRANT_ACTIVATED_ROLE"('workshop.exercises.<group>.data::workshopAdmin','WORKSHOP_<group>');

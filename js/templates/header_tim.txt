@@ -1,0 +1,2 @@
+listCsvFile csvFiles;
+import csvFiles "WORKSHOP_<group>" "workshop.exercises.g<group>.data::header";

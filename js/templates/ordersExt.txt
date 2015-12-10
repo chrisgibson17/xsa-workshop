@@ -1,0 +1,13 @@
+schema="<Your Schema Name>";
+query="select T0.\"OrderId\", 
+               T1.\"OrderItem\",
+               T0.\"CreatedBy\", 
+               T0.\"CreatedAt\" ,
+               T1.\"ProductId\",
+               T1.\"Quantity\", 
+               T1.\"QuantityUnit\"
+          from \"<Your Schema Name>\".\"workshop.exercsies.g<group number>.data::header\" T0 
+     left outer join \"<Your Schema Name>\".\"workshop.exercises.g<group number>.data::item\" T1 
+                  on T0.\"OrderId\" = T1.\"OrderId\" 
+            order by T0.\"OrderId\" ASC";
+ depends_on_table=["workshop.exercises.g<group number>.data::header","workshop.exercises.g<group number>.data::item"];

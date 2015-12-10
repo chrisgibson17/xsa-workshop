@@ -1,0 +1,2 @@
+call "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.procedures::get_product_sale_price"( 
+                im_productid => 'HT-1000', ex_product_sale_price => ?); 

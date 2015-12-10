@@ -1,0 +1,6 @@
+			var sort1 = new sap.ui.model.Sorter("PARTNERID");
+			oTable.bindItems({
+                path: "bpModel>/BusinessPartners",
+                template: columnList,
+                sorter: sort1
+            });

@@ -1,0 +1,3 @@
+select * from "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.data::Product.Products";
+select * from "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.data::Product.ProductLog";
+

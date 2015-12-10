@@ -1,0 +1,18 @@
+REPORT ZWS_<group_number>_EXT_VIEW_TEST.
+
+DATA: lt_po_items TYPE STANDARD TABLE OF zws_<group_number>_po_it.
+
+SELECT PURCHASEORDERID PURCHASEORDERITEM PRODUCTID
+       CURRENCY  SUM( GROSSAMOUNT )
+       SUM( NETAMOUNT ) SUM( TAXAMOUNT ) SUM( QUANTITY ) QUANTITYUNIT PRODUCT_NAME
+           from zws_<group_number>_po_it into table lt_po_items
+            GROUP BY PURCHASEORDERID PURCHASEORDERITEM PRODUCTID
+                     CURRENCY QUANTITYUNIT PRODUCT_NAME.
+  TRY.
+      cl_salv_table=>factory(
+               IMPORTING r_salv_table = data(lo_alv)
+                CHANGING  t_table      = lt_po_items ).
+      lo_alv->display( ).
+   CATCH cx_salv_error.
+ENDTRY.
+

@@ -1,0 +1,4 @@
+service namespace "sap.hana.democontent.epm"  { 
+   "sap.hana.democontent.epm.models::AT_PURCHASE_ORDER_WORKLIST" as "PO_WORKLIST" 
+   keys ("PURCHASEORDERID","PURCHASEORDERITEM");  
+}

@@ -1,0 +1,9 @@
+/*UIS - Register context changes for property searchTerms*/
+gadgets.HubSettings.onConnect = registerContext;
+function registerContext(){
+function searchContextChanged(topic, context){
+var terms = context.getPropertyByKey("searchTerms")[0];
+                oController.setFilter(terms,"COMPANY");
+}
+        gadgets.sapcontext.subscribe(searchContextChanged);
+}

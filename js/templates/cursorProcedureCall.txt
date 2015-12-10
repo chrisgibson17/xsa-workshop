@@ -1,0 +1,2 @@
+call "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.procedures::update_product_prices"( 
+       im_rate => '.25', im_direction => 'INCREASE', ex_products => ? );

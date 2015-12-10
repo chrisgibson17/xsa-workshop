@@ -1,0 +1,25 @@
+jQuery.sap.declare("sap.workshop.odataBasic.Component");
+
+
+sap.ui.core.UIComponent.extend("sap.workshop.odataBasic.Component", {
+	
+	createContent: function() {
+        //To-Do: initialize model here
+		
+		var settings = {
+				ID: "odataBasic",
+				title: "OData Basic Exercise",
+				description: "SHINE service for OData Basic Exercise"
+			};
+		
+		var oView = sap.ui.view({
+			id: "app",
+			viewName: "view.App",
+			type: "JS",
+			viewData: settings
+		});
+		
+		 oView.setModel(oModel, "bpModel");  
+		return oView;
+	}
+});

@@ -1,0 +1,2 @@
+call "HANA_WORKSHOP_<group_number>"."workshop.exercises.g<group_number>.procedures::get_products_by_filter"(
+    im_filter_string => '"CATEGORY" like ''Soft%''', ex_products => ?);

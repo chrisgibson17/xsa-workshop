@@ -1,0 +1,6 @@
+role workshop.exercises.g<group>.data::workshopAdmin
+	extends role workshop.exercises.g<group>.data::workshopUser 
+{
+	catalog schema "HANA_WORKSHOP_<Group>": SELECT, INSERT, UPDATE, DELETE, EXECUTE, DEBUG, DROP;
+	application privilege: workshop.exercises.g<group>::Admin;	
+}

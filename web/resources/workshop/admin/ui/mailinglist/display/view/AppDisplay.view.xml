@@ -1,0 +1,93 @@
+<core:View controllerName="view.AppDisplay" xmlns="sap.m"
+	xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<u:Shell id="myShell" icon="/workshop/admin/ui/mailingList/images/sap_18.png">
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder"
+				username="{config>/UserName}" />
+		</u:user>
+		<u:content>
+			<Panel headerText="Mailing List Data"
+				expandable="true" expanded="true">
+				<Toolbar>
+					<ToolbarSpacer />
+					<Button text="Delete ALL" type="Reject" press="onDelete" />
+					<Button text="Export to Excel" type="Accept" press="onExport" />
+				</Toolbar>
+   <Table 
+	        tableId="mailingTable"
+	        growingThreshold="10"
+	        growing="true"
+	        fixed="true"
+	        items="{
+                path: 'mailing>/Mailing_List',
+                sorter: { path: 'RecordId' }}"
+            >
+        <columns>
+            <Column>
+                <header><Label text="Record Id" /></header>
+            </Column>
+            <Column>
+                <header><Label text="Session Id" /></header>
+            </Column>
+            <Column>
+                <header><Label text="User Id" /></header>
+            </Column>
+            <Column>
+                <header><Label text="Date Created" /></header>
+            </Column>     
+            <Column>
+                <header><Label text="First Name" /></header>
+            </Column> 
+            <Column>
+                <header><Label text="Last Name" /></header>
+            </Column>    
+            <Column>
+                <header><Label text="Email Address" /></header>
+            </Column>                                        
+          </columns>
+         <items>
+             <ColumnListItem>
+                 <cells>
+                     <Input 
+                        value="{path: 'mailing>RecordId'}"
+                        name="RecordId"
+                        editable="false">
+                     </Input>
+                     <Input 
+                        value="{path: 'mailing>SessionId'}"
+                        name="SessionId"
+                        editable="false">
+                     </Input>
+                     <Input
+                         value="{path: 'mailing>UserId'}"
+                        name="UserId"
+                        editable="false">
+                     </Input>
+                     <Input
+                         value="{path: 'mailing>DateCreated'}"
+                        name="DateCreated"
+                        editable="false">
+                     </Input> 
+                     <Input
+                         value="{path: 'mailing>FirstName'}"
+                        name="FirstName"
+                        editable="false">
+                     </Input>  
+                     <Input
+                         value="{path: 'mailing>LastName'}"
+                        name="LastName"
+                        editable="false">
+                     </Input>
+                     <Input
+                         value="{path: 'mailing>EmailAddress'}"
+                        name="EmailAddress"
+                        editable="false">
+                     </Input>                                                                                    
+              </cells>
+             </ColumnListItem>
+         </items>    
+	    </Table>				
+			</Panel>
+		</u:content>
+	</u:Shell>
+</core:View>

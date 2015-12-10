@@ -1,0 +1,14 @@
+sap.ui.jsview("helloworldui5.HelloWorld", {
+
+      getControllerName : function() {
+         return "helloworldui5.HelloWorld";
+      },
+
+      createContent : function(oController) {
+    		var myButton = new sap.ui.commons.Button("btn");
+    		myButton.setText("Hello World");
+    		myButton.attachPress(function(){$("#btn").fadeOut();});
+    		return myButton;
+      }
+
+});

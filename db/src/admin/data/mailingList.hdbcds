@@ -1,0 +1,13 @@
+namespace workshop.admin.data;
+
+     Entity mailingList {
+		key "RecordId": String(10); // Record ID
+		"SessionId": String(20) not null; // Session ID
+		"UserId": String(20) not null; // User ID
+		"DateCreated": UTCTimestamp not null; // Date Created
+		"FirstName": String(40) not null; // First Name
+		"LastName": String(40) not null; // Last Name
+		"EmailAddress": String(255) not null; // Email Address
+ 	 } technical configuration {
+          column store;
+    };

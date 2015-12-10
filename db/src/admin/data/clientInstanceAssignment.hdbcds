@@ -1,0 +1,15 @@
+namespace workshop.admin.data;
+
+context clientInstanceAssignment {
+
+     Entity Assignments {
+     	key USER_ID: String(60);
+     	CLIENT_IP_ADDRESS: String(30);
+     	ASSIGNMENT_TIMESTAMP: UTCTimestamp;
+     	EMAIL: String(255);
+     	ASSIGNED: String(1);
+ 	 } technical configuration {
+          column store;
+    };
+    
+};

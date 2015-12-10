@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Client Instance Assignment</title>
+   		<link type="image/x-icon" href="/workshop/admin/ui/cia/images/favicon.ico" rel="shortcut icon">
+        <link type="image/x-icon" href="/workshop/admin/ui/cia/images/favicon.ico" rel="icon"> 
+	<script id="sap-ui-bootstrap" 
+		src="/sap/ui5/1/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-xx-bindingSyntax="complex"
+		data-sap-ui-resourceroots='{
+				"sap.workshop.cia": "./",
+				"view": "./view"}'		
+		data-sap-ui-libs="sap.m, sap.me">
+	</script>
+    <script type="text/javascript" src="/workshop/admin/shared/global.js" ></script> 
+	<script type="text/javascript" src="/workshop/admin/shared/csrf.js" ></script>  
+	<script type="text/javascript" src="/workshop/admin/shared/error.js" ></script>  
+	<script>
+	
+	new sap.m.Shell({
+		app : new sap.ui.core.ComponentContainer({
+			name : "sap.workshop.cia"
+		})
+	}).placeAt("content");
+	
+	</script>
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+</html>	  			  

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+       <head>
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <title>Workshop Exercise Management</title>
+		      <link type="image/x-icon" href="/workshop/admin/ui/exerciseMaster/images/favicon.ico" rel="shortcut icon">
+        	  <link type="image/x-icon" href="/workshop/admin/ui/exerciseMaster/images/favicon.ico" rel="icon"> 			  
+   			  <script src="/sap/ui5/1/resources/sap-ui-core.js"
+                      id="sap-ui-bootstrap"
+                      data-sap-ui-libs="sap.ui.ux3,sap.ui.commons,sap.ui.table"
+                      data-sap-ui-theme="sap_bluecrystal" >
+              </script>
+              <script type="text/javascript" src="/workshop/admin/ui/exerciseMaster/csrf.js" ></script> 
+              <!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+<style>
+#detailsPanel {
+	margin: 0 20px;
+}
+</style>
+   			  <script>
+   			
+   			  var workshopJSON;
+   			  
+   			  Array.prototype.move = function(old_index, new_index){
+   				  if (new_index >= this.length){
+   					  var k = new_index - this.length;
+   					  while ((k--) + 1){
+   						  this.push(undefined);
+   					  }
+   				  }
+   				  this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+   			  }
+   			  
+   			  function saveWorkshop(workshopName){
+
+   				sap.ui.core.BusyIndicator.show();		
+   				//oSapBackPack = new Object();
+            //    oSapBackPack.Activate = true;    
+            //    oSapBackPack.Workspace='WORKSHOP_ADMIN';
+            //    sapBackPack = JSON.stringify(oSapBackPack);
+                var ajaxCall = jQuery.ajax({
+                       url : "/rest/workshop/"+workshopName, //  + ".json",
+                       type : 'PUT',
+                       data : JSON.stringify(workshopJSON),
+                       dataType: 'json',
+       			           //processData: true,                       
+                       contentType: "application/json; charset=utf-8",
+                      // headers : {
+                     ///         "Content-Type" : "text/plain;charset=UTF-8"
+                            //"SapBackPack" : sapBackPack,
+                            //  "X-CSRF-Token" : frames.securityToken
+                     //  },
+                       async: false 
+                });
+
+   				
+   				
+  				/* var aUrl = '/workshop/admin/services/exercisesMaster.xsjs?cmd=createWorkshop&name='+workshopName;
+   			 	var ajaxCall = jQuery.ajax({
+   			       url: aUrl,
+   			       data: JSON.stringify(workshopJSON),
+   			       processData: false,
+   			       type: 'PUT',
+   			       dataType: 'text',
+   			       async: false }); */
+   			 	var response = ajaxCall.responseText;
+   			 	var responseStatus = ajaxCall.status;
+   				sap.ui.core.BusyIndicator.hide();	
+   				if(responseStatus == '200' || responseStatus == '202'){
+   					sap.ui.commons.MessageBox.show('Workshop Saved Sucessfully', 
+	    				 "INFORMATION",
+	    				 "Save Workshop" );
+   				return true; }
+   				else if(responseStatus == '404'){
+  		    		 sap.ui.commons.MessageBox.show('Service Not Available', 
+   		    				 "ERROR",
+   		    				 "Service Call Error" );	
+   		    		return false;	   					
+   				}
+   				else{
+  			         sap.ui.commons.MessageBox.show(response, 
+   		    				 "ERROR",
+   		    				 "Service Call Error" );	
+   		    		return false;   					
+   				}
+
+   				 
+   			  }
+   			 
+   			 function refreshTree(){
+   				 var otree = sap.ui.getCore().byId("workshopTree");
+   				 otree.destroyNodes();
+   				 for ( var i = 0; i < workshopJSON.exercises.length; i++) {
+   					 var oNode1 = new sap.ui.commons.TreeNode(workshopJSON.exercises[i].key, {text:workshopJSON.exercises[i].text, expanded: true});
+   					 otree.addNode(oNode1);
+   						if(typeof(workshopJSON.exercises[i].steps) != 'undefined'){
+   						for ( var isub = 0; isub < workshopJSON.exercises[i].steps.length; isub++) {
+   							var oNode2 = new sap.ui.commons.TreeNode(workshopJSON.exercises[i].steps[isub].key, {text:workshopJSON.exercises[i].steps[isub].text, expanded: true});
+   							oNode1.addNode(oNode2);
+   						}}
+   						
+   					}
+   				 
+   				 sap.ui.getCore().byId("nodeKey").setValue("");
+   				 sap.ui.getCore().byId("nodeText").setValue("");
+   				 
+   				 sap.ui.getCore().byId("nodePackage").setValue("");
+   				 sap.ui.getCore().byId("nodeObject").setValue("");
+   				 sap.ui.getCore().byId("nodeExtension").setValue("");
+   			 }
+   			 
+   			  
+   			 function onServiceError(jqXHR, textStatus, errorThrown){
+   	    	  if(jqXHR.status == '500'){
+   		    		 sap.ui.commons.MessageBox.show(jqXHR.responseText, 
+   		    				 "ERROR",
+   		    				 "Service Call Error" );	
+   		    		return;	
+   	    	  }
+   	    	  else{
+   			         sap.ui.commons.MessageBox.show(jqXHR.statusText, 
+   		    				 "ERROR",
+   		    				 "Service Call Error" );	
+   		    		return;	
+   	    	  }
+   	    	}
+   			/*************** Hijacking for Gold Reflection *************/
+   			if (sap.ui.getCore().getConfiguration().getTheme() == "sap_goldreflection" || "sap_bluecrystal") { // this line is a hack, the rest of this coding is what a BusyIndicator hijacker could do
+   				sap.ui.core.BusyIndicator.attachOpen(function(oEvent) {
+   					$Busy = oEvent.getParameter("$Busy");
+   					iBusyPageWidth = jQuery(document.body).width();
+   					$Busy.css("top", "0").css("width", iBusyPageWidth + "px");
+   					bBusyAnimate = true;
+   					iBusyLeft = $Busy[0].offsetLeft;
+   					window.setTimeout(animationStep, iBusyTimeStep);
+   				});
+   				sap.ui.core.BusyIndicator.attachClose(function(oEvent) {
+   					bBusyAnimate = false;
+   				});
+   			}
+
+   			var bBusyAnimate = false;
+   			var iBusyLeft = 0;
+   			var iBusyDelta = 60;
+   			var iBusyTimeStep = 50;
+   			var iBusyWidth = 500;
+   			var iBusyPageWidth;
+   			var $Busy;
+
+   			function animationStep() {
+   				if (bBusyAnimate) {
+   					iBusyLeft += iBusyDelta;
+   					if (iBusyLeft > iBusyPageWidth) {
+   						iBusyLeft = -iBusyWidth;
+   					}
+   					$Busy.css("background-position", iBusyLeft + "px 0px");
+   					window.setTimeout(animationStep, iBusyTimeStep);
+   				}
+   			}
+   			/*************** END of Hijacking for Gold Reflection *************/
+   			
+   			  
+			         sap.ui.localResources("exercise_management");
+                     var view = sap.ui.view({id:"idShell1", viewName:"exercise_management.Shell", type:sap.ui.core.mvc.ViewType.JS});
+   			         view.placeAt("content");
+   			  </script>
+
+       </head>
+       <body class="sapUiBody" role="application">
+              <div id="content"></div>
+       </body>
+</html>

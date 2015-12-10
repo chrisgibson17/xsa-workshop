@@ -1,0 +1,8 @@
+service namespace "workshop.services" {
+  "SAP_HANA_EPM_DEMO"."sap.hana.democontent.epm.data::businessPartner" 
+      as "BusinessPartners" navigates ("Address" as "BPAddress");
+  "SAP_HANA_EPM_DEMO"."sap.hana.democontent.epm.data::addresses" 
+      as "BPAddress";
+  association "Address" principal "BusinessPartners"("AddressId")
+      multiplicity "1" dependent "BPAddress"("AddressId") multiplicity "1";
+} 

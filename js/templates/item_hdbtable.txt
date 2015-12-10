@@ -1,0 +1,12 @@
+table.schemaName = "HANA_WORKSHOP_<group_number>";
+table.tableType = COLUMNSTORE;  
+table.description = "Workshop Order Item";
+table.columns = [ 
+	{name = "OrderId"; sqlType = NVARCHAR; nullable = false; length = 10;     comment = "Order ID"; },
+	{name = "OrderItem"; sqlType = NVARCHAR; nullable = false; length = 10;   comment = "Order Item"; },
+	{name = "ProductId"; sqlType = NVARCHAR; nullable = false; length = 10;   comment = "Product ID"; },
+	{name = "Quantity"; sqlType = DECIMAL; nullable = false; precision = 13; scale = 3; defaultValue = "0"; 
+	                                                                          comment = "Quantity"; },	
+	{name = "QuantityUnit"; sqlType = NVARCHAR; nullable = false; length = 3; comment = "Quantity Unit"; },
+	{name = "DeliveryDate"; sqlType = DATE; nullable = true;                  comment = "Scheduled Delivery Date"; }];		
+table.primaryKey.pkcolumns = ["OrderId","OrderItem"];

@@ -1,0 +1,6 @@
+service namespace "sap.hana.democontent.epm" { 
+   "sap.hana.democontent.epm.data::purchaseOrderHeaderExternal" as "PurchaseOrderHeader" keys ("PurchaseOrderId") navigates ("PO_Item" as "PurchaseOrderItem");
+   "sap.hana.democontent.epm.models::AT_PURCHASE_ORDER_WORKLIST" as "PurchaseOrderItem" keys ("PURCHASEORDERID","PURCHASEORDERITEM");
+   association "PO_Item" principal "PurchaseOrderHeader"("PurchaseOrderId") 
+     multiplicity "1" dependent "PurchaseOrderItem"("PURCHASEORDERID") multiplicity "*";
+}

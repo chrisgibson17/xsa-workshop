@@ -1,0 +1,8 @@
+SEQUENCE "workshop.admin.data::recordId" 
+INCREMENT BY 1 
+START WITH 1000000000 
+MINVALUE 1 
+MAXVALUE 1999999999
+NO CYCLE
+RESET BY
+SELECT IFNULL(MAX("RecordId"), 0)+1 FROM "workshop.admin.data::mailingList"

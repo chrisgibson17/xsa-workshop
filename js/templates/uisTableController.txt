@@ -1,0 +1,54 @@
+setFilter: function(terms, attribute)
+    {
+        //filterTerms = terms;
+        var mySplitResults = terms.split(' | ' + oBundle.getText("attribute") + ' ');
+        gFilterTerms = mySplitResults[0];
+        gFilterAttribute = mySplitResults[1];
+
+        if(gFilterTerms=="*") this.emptyFilter();
+
+        oTable = sap.ui.getCore().byId("poTable");
+
+        //Change from the Display Attribute Names to the property names in the ODATA service
+        switch(gFilterAttribute)
+        {
+            case 'Company Name':
+                gFilterAttribute='CompanyName';
+                break;
+            case 'Product ID':
+                gFilterAttribute='ProductId';
+                break;
+            case 'Product Name':
+                gFilterAttribute='ProductName';
+                break;
+            case 'Product Desc':
+                gFilterAttribute='ProductDesc';
+                break;
+            case 'City':
+                gFilterAttribute='PartnerCity';
+                break;
+            case 'Category':
+                gFilterAttribute='ProductCategory';
+                break;
+            case 'Purchase Order ID':
+                gFilterAttribute='PurchaseOrderId';
+                break;
+        }
+
+
+        //Build OData Service Sorter by PO ID, and Item
+        var sort1 = new sap.ui.model.Sorter("PurchaseOrderId,PurchaseOrderItem");
+
+        //Build the OData Service Filter Options
+        if(gFilterTerms=="")
+        {   oTable.bindRows("/PO_WORKLIST",sort1,[]); }
+        else
+        { 	var aflt1 = new sap.ui.model.Filter(escape(gFilterAttribute),sap.ui.model.FilterOperator.EQ,escape(gFilterTerms));
+            oTable.bindRows("/PO_WORKLIST",sort1,[aflt1]); }
+
+        //Set the Number of Rows in table header and clear the table lead selection
+        var iNumberOfRows = oTable.getBinding("rows").iLength;
+        oTable.setTitle(oBundle.getText("pos",[numericSimpleFormatter(iNumberOfRows)]));
+        oTable.clearSelection();
+
+    },

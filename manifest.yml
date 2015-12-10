@@ -1,0 +1,41 @@
+---
+applications:
+- name: workshop
+  path: web
+  port: 49030
+  env:
+    destinations: >
+      [
+        {"name":"nodejs", "url":"https://mo-6863688bc.mo.sap.corp:49031", "forwardAuthToken": true},
+        {"name":"xsjs", "url":"https://mo-6863688bc.mo.sap.corp:49032", "forwardAuthToken": true},        
+        {"name":"ui5", "url":"http://mo-6863688bc.mo.sap.corp:8000/sap/ui5/1/"}        
+      ]  
+  services:
+    - workshop-uaa   
+
+- name: workshop-db
+  path: db
+  memory: 128M
+  no-route: true  
+  services:
+    - workshop-hdi-container  
+
+- name: workshop-js
+  path: js
+  port: 49031
+  services:
+    - workshop-hdi-container
+    - workshop-uaa    
+  env:
+    HANA_SERVICE_NAME: workshop-hdi-container
+    UAA_SERVICE_NAME: workshop-uaa
+    
+- name: workshop-xsjs
+  path: xsjs
+  port: 49032
+  services:
+    - workshop-hdi-container
+    - workshop-uaa     
+  env:
+    HANA_SERVICE_NAME: workshop-hdi-container
+    UAA_SERVICE_NAME: workshop-uaa        

@@ -1,0 +1,324 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"stringify"
+			],
+			[
+				"scr",
+				"scrollHeight"
+			],
+			[
+				"array",
+				"Array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xs/apps/workshop",
+		"/C/xs/apps/workshop/db",
+		"/C/xs/apps/workshop/db/node_modules",
+		"/C/xs/apps/workshop/db/src"
+	],
+	"file_history":
+	[
+		"/C/xs/apps/DEV162_Ex4c/js/src/hello.xsjs",
+		"/C/xs/apps/DEV602/manifest.yml",
+		"/C/xs/apps/workshop/manifest.yml",
+		"/C/xs/bin/xs-init2.cmd",
+		"/C/xs/bin/xs-init.cmd",
+		"/C/xs/installdata/apps/uaa-security-db/manifest.yml",
+		"/C/xs/installdata/apps/hdi-broker/catalog.json",
+		"/C/xs/installdata/apps/monitoring/manifest.yml",
+		"/C/xs/installdata/apps/hdi-broker/manifest.yml",
+		"/C/xs/installdata/apps/hdi-broker/config.json",
+		"/C/xs/installdata/apps/deploy-service/manifest.yml",
+		"/C/xs/apps/workshop/js/index.js",
+		"/C/xs/apps/workshop/xsjs/xsjs.js",
+		"/C/xs/apps/DEV162_Ex4c/js/src/require.xsjs",
+		"/C/xs/apps/workshop/db/src/admin/data/exerciseMaster.hdbcds",
+		"/C/xs/apps/workshop/workshop.sublime-project",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Shell.view.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Edit.controller.js",
+		"/C/Users/I809764/Downloads/test2.json",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Edit.view.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Search.controller.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Search.view.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/shared/csrf.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/csrf.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/management.html",
+		"/C/xs/apps/DEV602/js/src/xsjs/hdb.xsjs",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/index.html",
+		"/C/xs/apps/DEV162_Ex3/js/fileSync.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/view/Nav.controller.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/Component.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/view/App.controller.js",
+		"/C/xs/apps/DEV602/web/resources/odataView/App.view.xml",
+		"/C/Users/I809764/Downloads/test5.json",
+		"/C/xs/apps/DEV602/web/resources/odataView/MTableItem.fragment.js",
+		"/C/xs/apps/DEV602/web/resources/odataView/MTableHead.fragment.js",
+		"/C/xs/apps/DEV602/web/resources/odataView/App.controller.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/exercise_management/Shell.controller.js",
+		"/C/xs/apps/workshop/js/package.json",
+		"/C/xs/apps/workshop/js/node_modules/async/package.json",
+		"/C/xs/apps/DEV602/js/package.json",
+		"/C/xs/apps/DEV602/js/xsjs.js",
+		"/C/xs/apps/DEV602/js/src/xsjs/procedures.xsjs",
+		"/C/xs/apps/DEV602/js/src/xsjs/require.xsjs",
+		"/C/xs/apps/DEV602/js/src/xsodata/purchaseOrder.xsodata",
+		"/C/xs/apps/DEV602/web/package.json",
+		"/C/xs/apps/DEV602/web/xs-app.json",
+		"/C/xs/apps/DEV602/db/package.json",
+		"/C/xs/apps/DEV602/db/src/.hdinamespace",
+		"/C/xs/apps/DEV602/db/src/data/PurchaseOrder.hdbcds",
+		"/C/xs/apps/DEV602/db/src/data/orderId.hdbsequence",
+		"/C/xs/apps/DEV602/db/src/data/general.hdbsynonym",
+		"/C/xs/apps/DEV602/db/src/procedures/getPOItems.hdbprocedure",
+		"/C/xs/apps/DEV602/db/src/data/Purchase.hdbtabledata",
+		"/C/xs/apps/DEV602/db/src/.hdiconfig",
+		"/C/xs/apps/workshop/js/default-services.json",
+		"/C/Users/I809764/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/GJ1PTASA/explorer.xscfgm",
+		"/C/xs/apps/workshop/web/xs-app.json",
+		"/C/xs/apps/workshop/js/node_modules/xs-hdb-connection/lib/connection.js",
+		"/C/xs/apps/DEV162_Ex3/js/databaseAsync.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/entry/view/AppEntry.controller.js",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/cia.xsjs",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/entry/Component.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/entry/index.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/entry/view/AppEntry.view.xml",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/display/view/AppDisplay.view.xml",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/display/Component.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/entry/index.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/display/index.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/display/Component.js",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/display/view/AppDisplay.controller.js",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/mailingList.xsjs",
+		"/C/xs/apps/workshop/xs-security.json",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/entry/entry.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/display/view/AppEntry.view.xml",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/mailinglist/display/view/AppDisplay.view.xml",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/request/index.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/request/view/AppRequest.view.xml",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/display/index.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/cia/display.html",
+		"/C/xs/apps/workshop/web/resources/workshop/admin/ui/exerciseMaster/view/Empty.view.xml",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/session.xsjslib",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/shared/csrf.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/workshopUsers.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/mailingList.xsodata",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/exercises.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/exercisesMaster.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/externalDebugProcedures.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/workshop/admin/services/cia.xsodata",
+		"/C/xs/apps/workshop/xsjs/src/admin/services/cia.xsjs",
+		"/C/xs/apps/workshop/xsjs/src/admin/services/cia.xsodata",
+		"/C/xs/apps/workshop/xsjs/package.json",
+		"/C/xs/apps/workshop/xsjs/src/xsjs/hello.xsjs",
+		"/C/xs/apps/workshop/web/package.json",
+		"/C/xs/apps/DEV162_Ex4c/web/xs-app.json",
+		"/C/xs/apps/DEV162_Ex2/js/helloWeb2.js",
+		"/C/xs/apps/workshop/db/src/admin/data/users.hdbcds",
+		"/C/xs/apps/DEV162_Ex1a/js/xs-app.json",
+		"/C/xs/apps/workshop/db/src/admin/data/clientInstanceAssignment.hdbcds",
+		"/C/xs/apps/workshop/db/src/admin/data/recordId.hdbsequence",
+		"/C/xs/apps/workshop/db/src/admin/data/mailingList.hdbcds",
+		"/C/xs/apps/workshop/db/src/.hdinamespace",
+		"/C/xs/apps/workshop/db/src/admin/data/general.hdbsynonym",
+		"/C/xs/apps/workshop/db/src/.hdiconfig",
+		"/C/xs/apps/workshop/db/package.json",
+		"/C/xs/apps/DEV602/web/resources/index.html",
+		"/C/Users/I809764/nodejs/DEV602-Ex2/default-services.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex1/xs-app.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex1/local-destinations.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex1/package.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex2/xsjs.js",
+		"//students.fair.sap.corp/Studentshare/DEV602/DEV602-Ex1/xs-app.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex2/tableList.js",
+		"//students.fair.sap.corp/Studentshare/DEV602/DEV602-Ex1/package.json",
+		"//students.fair.sap.corp/Studentshare/DEV602/DEV602-Ex1/local-destinations.json",
+		"/C/Users/I809764/nodejs/DEV602-Ex1/node_modules/approuter/approuter.js",
+		"/C/xs/apps/DEV162_Ex5/web/resources/index.html",
+		"/C/xs/apps/DEV602/web/resources/odataView/MRead.fragment.xml",
+		"/C/Users/I809764/nodejs/chunk.js",
+		"/C/xs/bin/xs-init-small.cmd",
+		"/C/xs/apps/DEV602/web/resources/ComponentOdataTest.js",
+		"/C/xs/apps/DEV602/web/resources/odataTest.html",
+		"/C/xs/apps/DEV602/js/src/xsjs/exercisesMaster.xsjs",
+		"/C/xs/apps/DEV602/js/src/xsjs/csrf.xsjs",
+		"/C/xs/apps/DEV602/web/resources/common/csrf.js",
+		"/C/xs/installdata/apps/jobscheduler/db/src/global_parameters.hdbtabledata",
+		"/C/xs/apps/xsodata/package.json",
+		"/C/xs/apps/DEV602/js/node_modules/xsjs/node_modules/xsodata/package.json",
+		"/C/xs/apps/DEV602/js/src/xsjs/os.xsjs"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"0.7.1",
+			"role",
+			"entityType.schema",
+			"loadTableInfo",
+			"3005",
+			"Statement",
+			"connect",
+			"client",
+			"disconnect",
+			"ppp",
+			"path"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"0.9.1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "workshop.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 330.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
