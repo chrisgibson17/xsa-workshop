@@ -34,6 +34,6 @@ sap.ui.controller("view.AppRequest", {
 				model.setProperty("/TimeStamp",myJSON.Assignment[i].ASSIGNMENT_TIMESTAMP); 
 
 		     }
-	 },		
+	 }		
 	 
 });

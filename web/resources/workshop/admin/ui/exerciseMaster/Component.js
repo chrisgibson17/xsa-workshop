@@ -18,7 +18,7 @@ sap.ui.core.UIComponent.extend("sap.workshop.exerciseMaster.Component", {
 		var settings = {
 				ID: "app",
 				title: "Workshop Exercise Solutions & Templates",
-				description: "Workshop Exercise Solutions & Templates",
+				description: "Workshop Exercise Solutions & Templates"
 			};
 		
 		var oView = sap.ui.view({

@@ -1,17 +1,9 @@
 {
-  "name": "workshop-approuter",
-  "scripts": {
-    "start": "node node_modules/approuter/approuter.js"
-  },
-  "version": "1.0.0",
-  "description": "App Router Entry Point",
-  "dependencies": {
-    "approuter": "1.1.5"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.wdf.sap.corp/I809764/xsa-workshop"
-  },
-  "author": "Thomas Jung"
+	"name": "web-approuter",
+	"dependencies": {
+		"approuter": "1.3.9"
+	},
+	"scripts": {
+		"start": "node node_modules/approuter/approuter.js"
+	}
 }

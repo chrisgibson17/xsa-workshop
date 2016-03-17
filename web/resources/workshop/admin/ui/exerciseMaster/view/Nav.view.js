@@ -12,7 +12,7 @@ sap.ui.jsview("view.Nav", {
         			expandable: true,
         			expanded: false
         		});
-        		oPanel.setHeaderText(oExercises.exercises[i].text)
+        		oPanel.setHeaderText(oExercises.exercises[i].text);
         		var oInnerList = new sap.m.List({});
         		//Inner Items
         		for ( var isub = 0; isub < oExercises.exercises[i].steps.length; isub++) {
@@ -20,18 +20,18 @@ sap.ui.jsview("view.Nav", {
         			var key = oExercises.exercises[i].steps[isub].key;
         			if(key===gSelection){
         				oPanel.setExpanded(true);
-        			};
+        			}
         			var path = oExercises.exercises[i].steps[isub].package + "/" +
         					   oExercises.exercises[i].steps[isub].object + "." +
         					   oExercises.exercises[i].steps[isub].extension;
         			var oText = new sap.m.Text({
         				text: oExercises.exercises[i].steps[isub].text
-        			})
+        			});
         			var oGrid = new sap.ui.layout.Grid({});
         			oGrid.addContent(oText);
         			var TextLayout = new sap.ui.layout.GridData({
         				span: "L10 M10 S10"
-        			})
+        			});
         			oText.setLayoutData(TextLayout);
         			
         			var oButton = new sap.m.Button({
@@ -42,10 +42,10 @@ sap.ui.jsview("view.Nav", {
         				type:"Transparent",
         				press: oController.viewObjects        					
         					
-        			})
+        			});
         			var ButtonLayout = new sap.ui.layout.GridData({
         				span: "L2 M2 S2"
-        			})
+        			});
         			oButton.setLayoutData(ButtonLayout);
         			oGrid.addContent(oButton);
         			

@@ -20,7 +20,7 @@ sap.ui.core.UIComponent.extend("sap.workshop.cia.Component", {
 		var settings = {
 				ID: "App",
 				title: "Client Instance Assignment",
-				description: "Client Instance Assignment",
+				description: "Client Instance Assignment"
 			};
 		
 		var oView = sap.ui.view({
@@ -51,5 +51,5 @@ sap.ui.core.UIComponent.extend("sap.workshop.cia.Component", {
 		   var config =  sap.ui.getCore().getModel("config");
 		   config.setProperty("/UserName",myJSON.session[i].UserName);
 	     }
-	},	
+	}	
 });

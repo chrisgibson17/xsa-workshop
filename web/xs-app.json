@@ -1,10 +1,8 @@
 {
-	"welcomeFile" : "index.html",
-	"routes" : [{
-			"source" : "/sap/ui5/1(.*)",
-			"target" : "$1",
-			"destination" : "ui5"
-		}, {
+	"welcomeFile": "index.html",
+	"authenticationMethod": "route",
+	"routes" : [
+		{
 			"source" : "(workshop.*)(.xsjs)",
 			"destination" : "xsjs"
 		}, {

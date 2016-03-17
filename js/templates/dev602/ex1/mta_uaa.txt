@@ -1,0 +1,16 @@
+ID: dev602
+description: DEV602 Group 01 First XS Advanced App
+version: 0.0.1
+
+modules:
+- name: web
+  type: html5
+  path: web
+  requires:
+      - name: dev602_<group number>-uaa
+      
+resources:
+  - name: dev602_<group number>-uaa
+    type: com.sap.xs.uaa
+    parameters:
+      config_path: ./xs-security.json  

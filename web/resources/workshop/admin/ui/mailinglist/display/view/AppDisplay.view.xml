@@ -1,87 +1,55 @@
-<core:View controllerName="view.AppDisplay" xmlns="sap.m"
-	xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
-	<u:Shell id="myShell" icon="/workshop/admin/ui/mailingList/images/sap_18.png">
+<core:View xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="view.AppDisplay">
+	<u:Shell id="myShell" icon="/workshop/admin/ui/mailinglist/images/sap_18.png">
 		<u:user>
-			<u:ShellHeadUserItem image="sap-icon://person-placeholder"
-				username="{config>/UserName}" />
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="{config&gt;/UserName}"/>
 		</u:user>
 		<u:content>
-			<Panel headerText="Mailing List Data"
-				expandable="true" expanded="true">
+			<Panel headerText="Mailing List Data" expandable="true" expanded="true">
 				<Toolbar>
-					<ToolbarSpacer />
-					<Button text="Delete ALL" type="Reject" press="onDelete" />
-					<Button text="Export to Excel" type="Accept" press="onExport" />
+					<ToolbarSpacer/>
+					<Button text="Delete ALL" type="Reject" press="onDelete"/>
+					<Button text="Export to Excel" type="Accept" press="onExport"/>
 				</Toolbar>
-   <Table 
-	        tableId="mailingTable"
-	        growingThreshold="10"
-	        growing="true"
-	        fixed="true"
-	        items="{
-                path: 'mailing>/Mailing_List',
-                sorter: { path: 'RecordId' }}"
-            >
+   <Table tableId="mailingTable" growingThreshold="10" growing="true" fixed="true" items="{                 path: 'mailing&gt;/Mailing_List',                 sorter: { path: 'RecordId' }}">
         <columns>
             <Column>
-                <header><Label text="Record Id" /></header>
+                <header><Label text="Record Id"/></header>
             </Column>
             <Column>
-                <header><Label text="Session Id" /></header>
+                <header><Label text="Session Id"/></header>
             </Column>
             <Column>
-                <header><Label text="User Id" /></header>
+                <header><Label text="User Id"/></header>
             </Column>
             <Column>
-                <header><Label text="Date Created" /></header>
+                <header><Label text="Date Created"/></header>
             </Column>     
             <Column>
-                <header><Label text="First Name" /></header>
+                <header><Label text="First Name"/></header>
             </Column> 
             <Column>
-                <header><Label text="Last Name" /></header>
+                <header><Label text="Last Name"/></header>
             </Column>    
             <Column>
-                <header><Label text="Email Address" /></header>
+                <header><Label text="Email Address"/></header>
             </Column>                                        
           </columns>
          <items>
              <ColumnListItem>
                  <cells>
-                     <Input 
-                        value="{path: 'mailing>RecordId'}"
-                        name="RecordId"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;RecordId'}" name="RecordId" editable="false">
                      </Input>
-                     <Input 
-                        value="{path: 'mailing>SessionId'}"
-                        name="SessionId"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;SessionId'}" name="SessionId" editable="false">
                      </Input>
-                     <Input
-                         value="{path: 'mailing>UserId'}"
-                        name="UserId"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;UserId'}" name="UserId" editable="false">
                      </Input>
-                     <Input
-                         value="{path: 'mailing>DateCreated'}"
-                        name="DateCreated"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;DateCreated'}" name="DateCreated" editable="false">
                      </Input> 
-                     <Input
-                         value="{path: 'mailing>FirstName'}"
-                        name="FirstName"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;FirstName'}" name="FirstName" editable="false">
                      </Input>  
-                     <Input
-                         value="{path: 'mailing>LastName'}"
-                        name="LastName"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;LastName'}" name="LastName" editable="false">
                      </Input>
-                     <Input
-                         value="{path: 'mailing>EmailAddress'}"
-                        name="EmailAddress"
-                        editable="false">
+                     <Input value="{path: 'mailing&gt;EmailAddress'}" name="EmailAddress" editable="false">
                      </Input>                                                                                    
               </cells>
              </ColumnListItem>

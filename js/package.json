@@ -1,23 +1,17 @@
 {
-  "name": "workshop-js",
-  "version": "1.0.0",
-  "description": "Workshop node.js REST services",
-  "dependencies": {
-    "body-parser": "^1.13.3",
-    "bl": "^1.0.0",
-    "async": "^1.4.2",
-    "sap-cds": "1.0.2",    
-    "extend": "^2.0.1",
-    "glob": "^5.0.14",
-    "express": "^4.13.1",
-    "json-stringify-safe": "^5.0.1",
-    "node-dir": "^0.1.9",
-    "passport": "^0.2.2",
-    "tough-cookie": "^2.0.0",
+	"name": "js",
+	"description": "Pure Node.js Services for Workshop Utils",
+	"version": "1.0.0",
+	"main": "index.js",
+	"files": [],
+	"dependencies": {
+    "glob": "3.2.11",
+    "express": "4.12.3",
+    "passport": "0.2.1",
     "winston": "^1.0.1",
     "sap-hdb-connection": "latest",
-    "sap-xssec": "0.2.5",
-    "sap-xsenv": "1.0.1"
+    "sap-xssec": "0.5.3",
+    "sap-xsenv": "1.2.1"
   },
   "devDependencies": {},
   "scripts": {

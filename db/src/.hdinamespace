@@ -1,4 +1,5 @@
 {
-    "name":      "workshop",
+    "name":    "workshop",
+    "cascade":   false,
     "subfolder": "append"
 }

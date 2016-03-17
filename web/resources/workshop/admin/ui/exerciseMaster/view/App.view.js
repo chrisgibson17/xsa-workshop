@@ -21,8 +21,8 @@ sap.ui.jsview("view.App", {
 			});
 			var NavLayout = new sap.ui.layout.SplitterLayoutData({
 				size: "300px"
-			})
-			Nav.setLayoutData(NavLayout)
+			});
+			Nav.setLayoutData(NavLayout);
 
 
 			var appIcon = "./images/sap_18.png";

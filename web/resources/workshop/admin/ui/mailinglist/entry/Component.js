@@ -20,7 +20,7 @@ sap.ui.core.UIComponent.extend("sap.workshop.mailingList.Component", {
 		var settings = {
 				ID: "App",
 				title: "Workshop Mailing List",
-				description: "Workshop Mailing List",
+				description: "Workshop Mailing List"
 			};
 		
 		var oView = sap.ui.view({
@@ -51,5 +51,5 @@ sap.ui.core.UIComponent.extend("sap.workshop.mailingList.Component", {
 		   var config =  sap.ui.getCore().getModel("config");
 		   config.setProperty("/UserName",myJSON.session[i].UserName);
 	     }
-	},	
+	}	
 });

@@ -36,6 +36,6 @@ sap.ui.controller("view.AppEntry", {
 		sap.ui.getCore().getModel().setProperty("/eMail", " "); 
 		sap.m.MessageToast.show("Your information has been submitted successfully");
 
-	},	
+	}	
 	 
 });

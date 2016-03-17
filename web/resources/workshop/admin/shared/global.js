@@ -12,5 +12,5 @@ jQuery.download = function(url, data, method){
 		//send request
 		jQuery('<form action="'+ url +'" method="'+ (method||'post') +'">'+inputs+'</form>')
 		.appendTo('body').submit().remove();
-	};
+	}
 };
