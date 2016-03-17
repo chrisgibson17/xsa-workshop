@@ -9,15 +9,20 @@
     "express": "4.12.3",
     "passport": "0.2.1",
     "winston": "^1.0.1",
-    "sap-hdb-connection": "latest",
+    "sap-hdbext": "1.1.2",
     "sap-xssec": "0.5.3",
-    "sap-xsenv": "1.2.1"
+    "sap-xsenv": "1.2.1",
+    "sap-xsjs": "1.4.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
+  "devDependencies": {
+		"sap-xsjs-test": "1.0.3",
+		"express": "4.12.3",
+		"compression": "1.6.0"
+	},
   "repository": {
     "type": "git",
     "url": "https://github.wdf.sap.corp/I809764/xsa-workshop"

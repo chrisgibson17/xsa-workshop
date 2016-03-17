@@ -1,7 +1,7 @@
 _schema-version: 2.0.0
 ID: xsa-workshop
 description: HANA Product Management Workshop Utilities
-version: 1.11.101
+version: 1.11.103
 
 modules: 
   - name: db
@@ -10,17 +10,7 @@ modules:
     requires: 
       - name: hdi-container
 
-  - name: xsjs
-    type: nodejs  
-    path: xsjs
-    provides: 
-      - name: xsservice
-        properties: 
-          xsurl: "${default-url}"
-    requires: 
-      - name: workshop-uaa
-      - name: db
-      - name: hdi-container
+  
 
   - name: js
     type: nodejs  
@@ -45,12 +35,6 @@ modules:
           forwardAuthToken: true
           name: nodejs
           url: ~{nodeurl}
-      - group: destinations
-        name: xsservice
-        properties: 
-          forwardAuthToken: true
-          name: xsjs
-          url: ~{xsurl}
 
 resources: 
   - name: workshop-uaa

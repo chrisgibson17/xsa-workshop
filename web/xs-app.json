@@ -3,14 +3,14 @@
 	"authenticationMethod": "route",
 	"routes" : [
 		{
+			"source" : "/rest/(.*)",
+			"destination" : "nodejs"
+		},
+		{
 			"source" : "(workshop.*)(.xsjs)",
-			"destination" : "xsjs"
+			"destination" : "nodejs"
 		}, {
 			"source" : "(workshop.*)(.xsodata)",
-			"destination" : "xsjs"
-		}, {
-			"source" : "/rest/(.*)",
-			"target" : "$1",
 			"destination" : "nodejs"
 		}
 	]

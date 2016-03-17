@@ -1,3 +1,0 @@
-service namespace "workshop.admin.services"  { 
-   "workshop.admin.data::mailingList" as "Mailing_List";
-}

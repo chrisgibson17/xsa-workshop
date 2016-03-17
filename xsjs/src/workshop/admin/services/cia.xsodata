@@ -1,3 +1,0 @@
-service namespace "workshop.admin.services"  { 
-   "workshop.admin.data::clientInstanceAssignment.Assignments" as "ClientInstanceAssignments";
-}

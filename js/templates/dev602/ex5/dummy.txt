@@ -1,0 +1,17 @@
+//Simple Database Select - In-line Callbacks
+app.route("/dummy")
+  .get(function(req, res){
+  var client = req.db;
+  client.prepare(
+  "select SESSION_USER from \"dev602.data::DUMMY\" ", 
+     function (err, statement){
+       statement.exec([],
+       function (err, results) {
+       if (err){
+       res.type("text/plain").status(500).send("ERROR: " + err);
+       }else{
+       var result = JSON.stringify( { Objects: results });
+       res.type("application/json").status(200).send(result);
+     } }  );
+   } );
+}); 
