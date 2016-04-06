@@ -6,11 +6,11 @@ var xsenv = require("sap-xsenv");
 var port  = process.env.PORT || 3000;
 var server = require("http").createServer();
 var express = require("express");
-var node = require("./index"); 
+var exerciseAdmin = require("./exerciseAdmin"); 
 
 //Create base Express Server App
 var app = express(); 
-app.use("/rest", node());
+app.use("/rest", exerciseAdmin());
 
 var options = xsjs.extend({
 	//anonymous : true, // remove to authenticate calls
