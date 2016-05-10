@@ -1,4 +1,4 @@
-FUNCTION "dev602.procedures::get_po_counts" ( im_fdate DATE ) 
+FUNCTION "dev602.functions::get_po_counts" ( im_fdate DATE ) 
     RETURNS TABLE (EMPLOYEEID NVARCHAR(10),
 			       FULLNAME NVARCHAR(256), 
 			       CREATE_CNT INTEGER, 

@@ -1,4 +1,4 @@
-FUNCTION "dev602.procedures::get_full_name" (
+FUNCTION "dev602.functions::get_full_name" (
             IN im_firstname NVARCHAR(40) , 
             IN im_middlename NVARCHAR(40), 
             IN im_lastname NVARCHAR(40), 

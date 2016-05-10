@@ -16,16 +16,25 @@ var options = xsjs.extend({
 	//anonymous : true, // remove to authenticate calls
 	redirectUrl : "/index.xsjs"
 });
-// configure HANA
-options = xsjs.extend(options, xsenv.getServices({ hana: {tag: "hana"} }));
+//configure HANA
+try {
+    options = xsjs.extend(options, xsenv.getServices({ hana: {tag: "hana"} }));
+} catch (err) {
+    console.error(err);
+}
+
 // configure UAA
-options = xsjs.extend(options, xsenv.getServices({ uaa: {tag: "xsuaa"} }));
+try {
+    options = xsjs.extend(options, xsenv.getServices({ uaa: {tag: "xsuaa"} }));
+} catch (err) {
+    console.error(err);
+}
 
 //Add XSJS to the base app
 var xsjsApp = xsjs(options);
 app.use(xsjsApp);
 
-server.on('request', app);
+server.on("request", app);
 server.listen(port, function () {
-    console.log('HTTP Server: ' + server.address().port );
+    console.log("HTTP Server: " + server.address().port );
 });

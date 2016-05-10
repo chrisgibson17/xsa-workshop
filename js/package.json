@@ -5,27 +5,27 @@
 	"main": "index.js",
 	"files": [],
 	"dependencies": {
-    "glob": "3.2.11",
-    "express": "4.12.3",
-    "passport": "0.2.1",
-    "winston": "^1.0.1",
-    "sap-hdbext": "1.1.2",
-    "sap-xssec": "0.5.3",
-    "sap-xsenv": "1.2.1",
-    "sap-xsjs": "1.4.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "devDependencies": {
-		"sap-xsjs-test": "1.0.3",
+		"glob": "3.2.11",
+		"express": "4.12.3",
+		"passport": "0.3.2",
+		"winston": "^1.0.1",
+		"sap-hdbext": "2.0.4",
+		"sap-xssec": "0.5.4",
+		"sap-xsenv": "1.2.2",
+		"sap-xsjs": "1.6.4"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"devDependencies": {
+		"sap-xsjs-test": "1.0.7",
 		"express": "4.12.3",
 		"compression": "1.6.0"
 	},
-  "repository": {
-    "type": "git",
-    "url": "https://github.wdf.sap.corp/I809764/xsa-workshop"
-  },
-  "author": "Thomas Jung"
+	"repository": {
+		"type": "git",
+		"url": "https://github.wdf.sap.corp/I809764/xsa-workshop"
+	},
+	"author": "Thomas Jung"
 }

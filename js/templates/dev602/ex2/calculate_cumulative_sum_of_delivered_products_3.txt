@@ -5,7 +5,7 @@ PROCEDURE "dev602.procedures::calculate_cumulative_sum_of_delivered_products" (
     OUT EX_PRODUCTS TABLE ( PRODUCTID NVARCHAR(10), 
                             DELIVERYDATE DAYDATE,
                             NUM_DELIVERED_PRODUCTS BIGINT,
-                          CUMULATIVE_SUM BIGINT )  )
+                          CUMULATIVE_SUM BIGINT )  DEFAULT EMPTY  )
    LANGUAGE SQLSCRIPT
    SQL SECURITY INVOKER 
    READS SQL DATA AS

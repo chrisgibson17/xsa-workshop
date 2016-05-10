@@ -1,17 +1,17 @@
 {
 	"welcomeFile": "index.html",
 	"authenticationMethod": "route",
-	"routes" : [
-		{
-			"source" : "/rest/(.*)",
-			"destination" : "nodejs"
-		},
-		{
-			"source" : "(workshop.*)(.xsjs)",
-			"destination" : "nodejs"
-		}, {
-			"source" : "(workshop.*)(.xsodata)",
-			"destination" : "nodejs"
-		}
-	]
+	"routes": [{
+		"source": "/rest/(.*)",
+		"destination": "nodejs",
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "(.*)(.xsjs)",
+		"destination": "nodejs",
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "(.*)(.xsodata)",
+		"destination": "nodejs",
+		"authenticationType": "xsuaa"
+	}]
 }

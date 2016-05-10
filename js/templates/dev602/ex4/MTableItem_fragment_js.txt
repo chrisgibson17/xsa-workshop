@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: 0*/
 sap.ui.jsfragment("odataView.MTableItem", {
 	
     createContent: function(oController) { 

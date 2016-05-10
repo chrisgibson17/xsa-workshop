@@ -22,7 +22,7 @@ po_change_cnt =  SELECT COUNT(*) AS CHANGE_CNT, "HISTORY.CHANGEDBY.EMPLOYEEID" A
     GROUP BY  "HISTORY.CHANGEDBY.EMPLOYEEID";
 
 EX_TOP_3_EMP_PO_COMBINED_CNT = 
-          SELECT "dev602.procedures::get_full_name"( "NAME.FIRST", "NAME.MIDDLE", "NAME.LAST") as FULLNAME,
+          SELECT "dev602.functions::get_full_name"( "NAME.FIRST", "NAME.MIDDLE", "NAME.LAST") as FULLNAME,
           crcnt.CREATE_CNT, chcnt.CHANGE_CNT, crcnt.CREATE_CNT + chcnt.CHANGE_CNT AS COMBINED_CNT
       FROM "dev602.data::MD.Employees" as emp
       LEFT OUTER JOIN :PO_CREATE_CNT AS crcnt

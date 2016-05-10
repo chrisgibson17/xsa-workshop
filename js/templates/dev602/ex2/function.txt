@@ -1,4 +1,4 @@
-FUNCTION "dev602.procedures::get_employees_by_name_filter" 
+FUNCTION "dev602.functions::SALESORDER_RANKING_AND_DISCOUNT_SQL"
    (IP_FR_DATE DATE, IP_TO_DATE DATE, IP_REGION NVARCHAR(4))  
    RETURNS table ( COMPANY_NAME NVARCHAR(80), 
                    REGION NVARCHAR(4), 

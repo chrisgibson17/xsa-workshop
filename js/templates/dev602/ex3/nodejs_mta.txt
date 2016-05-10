@@ -6,6 +6,6 @@
       properties:
         url: "${default-url}"
   requires:
-    - name: dev602_01-uaa
+    - name: dev602_<group number>-uaa
     - name: db
     - name: hdi-container

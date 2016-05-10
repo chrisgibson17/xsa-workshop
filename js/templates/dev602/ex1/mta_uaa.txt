@@ -1,5 +1,5 @@
 ID: dev602
-description: DEV602 Group 01 First XS Advanced App
+description: DEV602 Group <group number> First XS Advanced App
 version: 0.0.1
 
 modules:

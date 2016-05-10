@@ -2,7 +2,7 @@
   type: html5
   path: web
   requires:
-    - name: dev602_01-uaa
+    - name: dev602_<group number>-uaa
     - name: nodejs
       group: destinations
       properties:
