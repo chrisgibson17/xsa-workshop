@@ -1,10 +1,11 @@
-<core:View
-	xmlns="sap.m"
-	xmlns:core="sap.ui.core" >
-    <Panel 
-	   id = "PanelContent"
-	   headerText="Source Code Template"
-	   expandable="false"
-	   expanded="true">	
-	</Panel> 
+<core:View xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Panel id="PanelContent" headerText="Source Code Template" expandable="false" expanded="true">
+		<headerToolbar>
+			<Toolbar height="3rem">
+				<Title id="panelTitle" text="Source Code Template"/>
+				<ToolbarSpacer/>
+				<Button class= "btn" id="copyBtn" icon="sap-icon://add-activity-2" text="Copy to Clipboard"/>
+			</Toolbar>
+		</headerToolbar>
+	</Panel>
 </core:View>
