@@ -1,7 +1,7 @@
 _schema-version: 2.0.0
 ID: xsa-workshop
 description: HANA Product Management Workshop Utilities
-version: 1.12.101
+version: 1.12.102
 
 modules: 
   - name: db
