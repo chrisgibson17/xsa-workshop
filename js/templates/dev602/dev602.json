@@ -316,15 +316,15 @@
 			"extension": ""
 		}, {
 			"key": "ex4_7",
-			"text": "4.7 MTableHead.fragment.js",
+			"text": "4.7 MTableHead.fragment.xml",
 			"package": "templates.dev602.ex4",
-			"object": "MTableHead_fragment_js.txt",
+			"object": "MTableHead_fragment_xml.txt",
 			"extension": ""
 		}, {
 			"key": "ex4_8",
-			"text": "4.8 MTableItem.fragment.js",
+			"text": "4.8 MTableItem.fragment.xml",
 			"package": "templates.dev602.ex4",
-			"object": "MTableItem_fragment_js.txt",
+			"object": "MTableItem_fragment_xml.txt",
 			"extension": ""
 		}, {
 			"key": "ex4_9",

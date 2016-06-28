@@ -1,0 +1,11 @@
+- name: js
+  type: nodejs
+  path: js
+  provides: 
+    - name: nodejs
+      properties:
+        url: "${default-url}"
+  requires:
+    - name: dev161_<group number>-uaa
+    - name: db
+    - name: hdi-container

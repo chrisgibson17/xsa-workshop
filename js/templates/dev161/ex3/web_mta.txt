@@ -1,0 +1,11 @@
+- name: web
+  type: html5
+  path: web
+  requires:
+    - name: dev161_<group number>-uaa
+    - name: nodejs
+      group: destinations
+      properties:
+        name: nodejs
+        url: ~{url}
+        forwardAuthToken: true

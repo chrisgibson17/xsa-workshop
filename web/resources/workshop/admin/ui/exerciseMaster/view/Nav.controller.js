@@ -73,7 +73,6 @@ sap.ui.controller("view.Nav", {
 	onInsertContent: function(myTXT,title) {
 		sap.ui.getCore().byId("Empty--PanelContent").removeAllContent();
 		sap.ui.getCore().byId("Empty--PanelContent").setHeaderText("Source Code Template");
-		sap.ui.getCore().byId("Empty--panelTitle").setText("Source Code Template");		
     	var oController = sap.ui.getCore().byId("Nav").getController();
     	var userName = sap.ui.getCore().getModel("config").getData().UserName;
 	    var parts = userName.split("_");
@@ -85,26 +84,13 @@ sap.ui.controller("view.Nav", {
 	    	myTXT = myTXT.replace(/<Your User>/g,gUserName);
 	   	}
 	    var newContent = oController.escapeHtml(myTXT);
-	    var html = new sap.ui.core.HTML({
+		var html = new sap.ui.core.HTML({
 			// static content
 			content : '<div class="wiki"><div class="code"><pre>'
 					+ newContent + '\n' + '</pre></div></div>',
 			preferDOM : false
 		});
-		var target = document.getElementById("Empty--copyBtn");
-		var clipboard = new Clipboard(".btn",{
-			text: function(){
-				return myTXT;
-			}
-		});
-		clipboard.on('success', function(e){
-			sap.m.MessageBox.alert("Template copied to clipboard");
-		});
-		clipboard.on('error', function(e){
-			sap.m.MessageBox.alert("Template failed to copy: "+ e.toString());
-		});
 		sap.ui.getCore().byId("Empty--PanelContent").setHeaderText("Source Code Template: " + title);
-		sap.ui.getCore().byId("Empty--panelTitle").setText("Source Code Template: " + title);		
         sap.ui.getCore().byId("Empty--PanelContent").addContent(html); 
 	},	
 	
