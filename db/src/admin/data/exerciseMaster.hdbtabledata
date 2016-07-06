@@ -1,0 +1,26 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "workshop.admin.data::exerciseMaster.workshop",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "workshop.admin.data::exerciseMaster.csv",
+                "has_header": false,
+                "type_config": {
+                  "delimiter": "\t"
+                }
+            },
+            "column_mappings": {
+                "WORKSHOP_ID": 1,
+                "JSON_DATA": 2
+            },
+            "import_settings": {
+                "import_columns": [
+                    "WORKSHOP_ID",
+                    "JSON_DATA"
+                ]
+            }
+        }
+    ]
+}

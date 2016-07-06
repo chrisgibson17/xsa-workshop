@@ -194,7 +194,11 @@ module.exports = function() {
 							if (err) {
 								res.type("text/plain").status(500).send("ERROR: " + err);
 							} else {
-								res.type("application/json").status(200).send(results[0].JSON_DATA);
+								if (results.length < 1 ) {
+									res.type("text/plain").status(500).send("ERROR: " + "No data for this workshop yet");
+								}else{
+									res.type("application/json").status(200).send(results[0].JSON_DATA);
+								}
 							}
 						}
 					);
