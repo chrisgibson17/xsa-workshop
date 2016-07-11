@@ -1,20 +1,29 @@
-{
-  "CROSS_SCHEMA_SFLIGHT_<group_number>": {
-    "object_owner" : {
-      "schema_privileges":[ 
-        { 
-          "reference":"SFLIGHT",
-          "privileges_with_grant_option":["SELECT", "SELECT METADATA"]
-        }
-      ]
-    },
-    "application_user" : {
-      "schema_privileges":[ 
-        { 
-          "reference":"SFLIGHT",
-          "privileges_with_grant_option":["SELECT", "SELECT METADATA"]
-        }
-      ]
-    }
-  }
-}
+_schema-version: 2.0.0
+ID: dev160
+version: 0.0.1
+
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+   - name: hdi-container
+     properties:
+       TARGET_CONTAINER: ~{hdi-service-name} 
+   - name: CrossSchemaService
+     group: SERVICE_REPLACEMENTS
+     properties:
+       key: hdi-sflight-service
+       service: ~{sflight-service-name} 
+
+resources:
+- name: hdi-container
+  type: com.sap.xs.hdi-container
+  properties:
+    hdi-service-name: ${service-name} 
+- name: CrossSchemaService
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: CROSS_SCHEMA_SFLIGHT_<group_number>
+  properties:
+    sflight-service-name: ${service-name}
