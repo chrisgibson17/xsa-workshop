@@ -1,0 +1,10 @@
+PROCEDURE "grant_role" ( 
+    in im_user nvarchar(80),
+    in im_role nvarchar(80),
+    out ex_message NVARCHAR(255))
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY DEFINER  AS
+BEGIN
+  EXEC 'GRANT "' ||  CURRENT_SCHEMA || '"."' || :in_role || '" to ' ||  :in_user ;
+  ex_message = 'Granted role ' || CURRENT_SCHEMA || '.' || :in_role ||  ' to ' || :in_user ;
+END

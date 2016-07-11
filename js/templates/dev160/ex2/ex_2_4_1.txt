@@ -1,0 +1,1 @@
+xs login -a https://LT5060:31030 -o SAP -s DEV -u DEV160_<group_number> -p Welcome16 --skip-ssl-validation

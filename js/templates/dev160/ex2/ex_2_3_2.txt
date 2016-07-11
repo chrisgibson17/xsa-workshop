@@ -1,0 +1,27 @@
+{
+"role":{
+"name": "dev160",
+	"object_privileges":[
+	{
+	"name": "PurchaseOrder.Header",
+	"type": "TABLE",
+	"privileges": [ "SELECT" ]
+	},
+	{
+	"name": "PurchaseOrder.Item",
+	"type": "TABLE",
+	"privileges": [ "SELECT" ]
+	},
+	{
+	"name": "PurchaseOrder.ItemView",
+	"type": "VIEW",
+	"privileges": [ "SELECT" ]
+	}		
+	],
+	"schema_analytic_privileges": [
+            {
+             "privileges":[ "PO_VIEW_PRIVILEGE" ]
+            }
+        ]
+}
+}
