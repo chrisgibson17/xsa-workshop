@@ -1,0 +1,4 @@
+IF :im_start_date > :im_end_date THEN
+       SIGNAL SQL_ERROR_CODE 10001
+              SET MESSAGE_TEXT = 'Start date must be before end date';
+END IF;

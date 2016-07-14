@@ -1,0 +1,4 @@
+insert into "log.messages"
+  VALUES( current_timestamp, ::CURRENT_OBJECT_SCHEMA,
+          ::CURRENT_OBJECT_NAME, null, null,
+          'Chuck Norris doesn''t need try-catch, exceptions are too afraid to raise!');
