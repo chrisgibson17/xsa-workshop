@@ -1,1 +1,1 @@
-xs create-service xsuaa default workshop-uaa -c xs-security.json
+xs create-service xsuaa space workshop-uaa -c xs-security.json
