@@ -24,6 +24,6 @@ resources:
 - name: CrossSchemaService
   type: org.cloudfoundry.existing-service
   parameters:
-    service-name: CROSS_SCHEMA_SFLIGHT_<group_number>
+    service-name: CROSS_SCHEMA_SFLIGHT_DEV160_<group_number>
   properties:
     sflight-service-name: ${service-name}

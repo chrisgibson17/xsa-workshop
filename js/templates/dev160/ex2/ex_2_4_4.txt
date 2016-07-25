@@ -1,5 +1,5 @@
 {
-  "CROSS_SCHEMA_SFLIGHT_<group_number>": {
+  "CROSS_SCHEMA_SFLIGHT_DEV160_<group_number>": {
     "object_owner" : {
       "schema_privileges":[ 
         { 
