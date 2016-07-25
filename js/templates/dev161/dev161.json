@@ -67,7 +67,7 @@
 		}, {
 			"key": "ex3_2",
 			"text": "3.2 node.js module of mta.yaml",
-			"package": "templates.161.ex3",
+			"package": "templates.dev161.ex3",
 			"object": "nodejs_mta.txt",
 			"extension": ""
 		}, {
