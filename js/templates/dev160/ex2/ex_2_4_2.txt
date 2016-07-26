@@ -1,1 +1,1 @@
-xs cups CROSS_SCHEMA_SFLIGHT_DEV160_<group number> -p "{\"host\":\"LT5060\",\"port\":\"31015\",\"user\":\"DEV160_<group_number>\",\"password\":\"Welcome16\",\"driver\":\"com.sap.db.jdbc.Driver\",\"tags\":[\"hana\"] , \"schema\" : \"SFLIGHT\" }"
+xs cups CROSS_SCHEMA_SFLIGHT_DEV160_<group number> -p "{\"host\":\"LT5060\",\"port\":\"31015\",\"user\":\"DEV160_SFLIGHT\",\"password\":\"Welcome16\",\"driver\":\"com.sap.db.jdbc.Driver\",\"tags\":[\"hana\"] , \"schema\" : \"SFLIGHT\" }"
